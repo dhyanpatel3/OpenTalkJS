@@ -17,8 +17,10 @@
 5. Write the script in the script.js file 📝
    bash
    import ollama from "ollama";
-   
 
+## script.js
+   
+```
 async function runChat() {
 try {
 const response = await ollama.chat({
@@ -34,7 +36,36 @@ console.error("Error occurred:", error.message);
 }
 
 runChat();
+```
 
+## main.js
+```
+import fs from 'fs/promises'; 
+import ollama from "ollama";
+
+async function processQuery() {
+    try {
+        const q = await fs.readFile("q.txt", "utf8");
+
+        const response = await ollama.chat({
+            model: "llama3.2:1b",
+            messages: [{ role: "user", content: q }],
+        });
+
+        const a = response.message.content;
+
+        await fs.writeFile("a.txt", a);
+
+        console.log("Response written to a.txt successfully!");
+    } catch (error) {
+        console.error("Error processing the query:", error);
+    }
+}
+
+
+processQuery();
+
+```
 ### 2️⃣ Dependencies installation
 
 1. Check the version for the node using the command 🛠
