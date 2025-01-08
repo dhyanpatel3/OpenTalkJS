@@ -1,0 +1,128 @@
+### Code Documentation
+=====================================
+
+Table of Contents
+-----------------
+
+1. [Introduction](#introduction)
+2. [Prerequisites](#prerequisites)
+3. [API Endpoints](#api-endpoints)
+4. [Response Codes](#response-codes)
+
+### Introduction
+------------
+
+This is a code documentation for the provided API endpoint(s). The documentation will cover the general structure, parameters, and response formats of the API.
+
+### Prerequisites
+-----------------
+
+To use this API, you need to have the following:
+
+* A valid API key or authentication token
+* Python 3.x installed on your machine
+* pip installed (if using a virtual environment)
+
+### API Endpoints
+----------------
+
+#### GET /users
+
+Returns a list of all users in the system.
+
+```python
+from apibase import APIServer, Request, Response
+
+class Users(APIServer):
+    def __init__(self):
+        super().__init__("GET /users")
+
+    def handle(self, request: Request) -> Response:
+        users = self.get_users()
+        return Response(data=users)
+```
+
+#### POST /users
+
+Creates a new user in the system.
+
+```python
+from apibase import APIServer, Request, Response
+
+class Users(APIServer):
+    def __init__(self):
+        super().__init__("POST /users")
+
+    def handle(self, request: Request) -> Response:
+        data = request.data
+        users = self.create_user(data)
+        return Response(data=users)
+```
+
+#### GET /users/{user_id}
+
+Returns a specific user by their ID.
+
+```python
+from apibase import APIServer, Request, Response
+
+class Users(APIServer):
+    def __init__(self):
+        super().__init__("GET /users/{user_id}")
+
+    def handle(self, request: Request) -> Response:
+        user_id = request.path_params.get("user_id")
+        users = self.get_user(user_id)
+        return Response(data=users)
+```
+
+#### PUT /users/{user_id}
+
+Updates a specific user by their ID.
+
+```python
+from apibase import APIServer, Request, Response
+
+class Users(APIServer):
+    def __init__(self):
+        super().__init__("PUT /users/{user_id}")
+
+    def handle(self, request: Request) -> Response:
+        user_id = request.path_params.get("user_id")
+        data = request.data
+        users = self.update_user(user_id, data)
+        return Response(data=users)
+```
+
+#### DELETE /users/{user_id}
+
+Deletes a specific user by their ID.
+
+```python
+from apibase import APIServer, Request, Response
+
+class Users(APIServer):
+    def __init__(self):
+        super().__init__("DELETE /users/{user_id}")
+
+    def handle(self, request: Request) -> Response:
+        user_id = request.path_params.get("user_id")
+        users = self.delete_user(user_id)
+        return Response(data=users)
+```
+
+### Response Codes
+----------------
+
+The API returns the following response codes:
+
+* 200 OK - The requested resource was found.
+* 400 Bad Request - The client provided invalid data or a malformed request.
+* 401 Unauthorized - The client is not authenticated.
+* 404 Not Found - The requested resource was not found.
+
+Table of Contents
+-----------------
+
+1. [API Endpoints](#api-endpoints)
+2. [Response Codes](#response-codes)

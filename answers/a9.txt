@@ -1,0 +1,37 @@
+Here's a sample bug report:
+
+**Bug Report Title:** [Insert title of the issue]
+
+**Report Details:**
+
+* **Issue Type:** Software Bug
+* **Operating System:** [Insert operating system, e.g. Windows 10, macOS High Sierra]
+* **Device:** [Insert device, e.g. laptop, smartphone]
+* **Browser/Platform Version:** [Insert browser or platform version, e.g. Chrome 102, Safari 15.1]
+* **Date Reported:** [Insert date and time the issue was reported]
+
+**Description:**
+
+I am reporting a bug that I encountered on my computer when trying to use [insert application name]. The issue is that the [application name] application keeps freezing and crashing, even after closing it.
+
+**Steps to Reproduce:**
+
+1. Open the [application name].
+2. Try to perform any operation (e.g., browse, send email).
+3. The application freezes or crashes.
+4. Try to reopen the application to see if it works again.
+5. Repeat steps 2-4 until the issue is resolved.
+
+**Screenshots:**
+
+I have attached a screenshot of the error message that appears when the application freezes:
+
+[Insert screenshot]
+
+**Additional Information:**
+
+* I have tried updating the [application name] to the latest version, but the issue persists.
+* I have also tried running the application in safe mode, but it still freezes and crashes.
+* The issue seems to be related to a specific feature or functionality.
+
+I would greatly appreciate it if someone could assist me in resolving this issue. Thank you for your attention to this matter.
