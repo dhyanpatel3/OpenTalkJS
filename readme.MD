@@ -7,7 +7,7 @@
 1. Open your terminal or command prompt 🖥
 2. Clone the repository using the following command 🔗
    bash
-   git clone https://github.com/Vinitpatel28/OpenTalkJS.git
+   git clone https://github.com/dhyanpatel03/OpenTalkJS.git
    
 3. Now enter into the clone file by using command 📂
    bash

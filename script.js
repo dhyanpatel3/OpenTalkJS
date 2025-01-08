@@ -4,7 +4,7 @@ async function runChat() {
   try {
     const response = await ollama.chat({
       model: "llama3.2:1b",
-      messages: [{ role: 'user', content: "Write product descriptions" }]
+      messages: [{ role: 'user', content: "Genrate" }]
     });
 
     console.log("Chatbot Response:", response.message.content);
